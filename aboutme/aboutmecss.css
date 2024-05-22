@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.bg img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.bg .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container {
+    position: relative;
+    width: 85vw;
+    height: 90vh;
+    background-color: blue;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+main .container img {
+    border-radius: 20px 0 0 20px;
+    /* padding-right: 20px; */
+    object-fit: cover;
+    width: 40%;
+}
+
+main .container .card-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+main .container .card-container .header {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+main .container .card-container .header .head .title .main-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 58px;
+    letter-spacing: 0.1em;
+}
+main .container .card-container .header .head .title .sub-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    color: #00ABF0;
+}
+main .container .card-container .header .link a ion-icon {
+    font-size: 35px;
+    /* padding: 20px; */
+    color: #00ABF0;
+    /* background-color: red; */
+}
+
+main .container .main-content {
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding: 0 10px;
+}
+.main-content .mob-profile img {
+    display: none;
+}
+
+
+main .container .card-container .btn a span {
+    /* background-color: red; */
+    display: inline-block;
+    padding: 5px 10px;
+    background: #00ABF0;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    /* position: absolute;
+    right: 5px;
+    bottom: 70px; */
+}
+main .container .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    /* background-color: red; */
+    /* width: 100%; */
+    /* text-align: center; */
+    z-index: 5;
+    padding: 10px;
+    opacity: .4;
+}
+@media (max-width: 800px) {
+    main .container .card-container .header {
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    main .container .card-container .header .head .title {
+        padding: 20px;
+    }
+    main .container .card-container .header .head .title .main-title {
+        font-size: 20px;
+        line-height: 0;
+    }
+    main .container .card-container .header .head .title .sub-title {
+        font-size: 14px;
+    }
+    main .container .main-content {
+        font-weight: 200;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+    }main .container .card-container .btn a span {
+        padding: 3px;
+        font-weight: 500;
+        font-size: 12px;
+    }main .container .copyright {
+        padding: 5px;
+        opacity: .4;
+        font-size: 10px;
+    }
+    main .container .card-container {
+        padding: 5px;
+    }
+    .container {
+        height: 75vh;
+    }main .container img {
+        display: none;
+    }main .container .card-container .header .link a ion-icon {
+        font-size: 25px;
+        padding-right: 20px;
+    }
+    main .container .card-container .main-content .mob-profile {
+        height: 40vh;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    main .container .card-container .main-content .mob-profile img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        /* transform: translateY(-50%); */
+    }
+}

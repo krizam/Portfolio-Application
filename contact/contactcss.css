@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.img-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: -1;
+}
+.main-container {
+    /* background-color: #5353538f; */
+    width: 90vw;
+    height: 90vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+header .title {
+    display: flex;
+    flex-direction: column;
+}
+header .title .head{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: 0.1em;
+}
+header .title .refular {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+}
+header .link a {
+    padding: 25px;
+    display: inline-block;
+}
+header .link a ion-icon{
+    width: 40px;
+    height: 40px;
+    color: #00ABF0;;
+}
+header .link a ion-icon:hover {
+    color: #6cc8ec;
+}
+
+main {
+    margin-top: 10vh;
+    display: flex;
+}
+main .form {
+    width: 700px;
+    /* background-color: red; */
+    padding-right: 2em;
+}
+main .form .form-head {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+    color: #00ABF0;
+}
+main .form form {
+    padding-top: 20px;
+}
+main .form .form-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+main .form .que {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+}
+main .form .inp {
+    background: rgba(217, 217, 217, 0.1);
+    border: 1px solid #00ABF0;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    /* max-width: 250px; */
+    min-width: 60%;
+}
+main .form .form-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+main .form .form-column .que {
+    margin-bottom: 5px;
+}
+main .form .form-column .inp {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+main .form .send input {
+    height: 40px;
+    background: #00ABF0;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    outline: none;
+    border: none;
+}
+main .form .send input:hover {
+    background-color: #6cc8ec;
+    font-weight: 700;
+}
+
+.info {
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info .info-content{
+    background: rgba(255, 255, 255, 0.1);
+    /* background-color: red; */
+    border-radius: 10px;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    min-width: 300px;
+    padding: 10px 30px;
+}
+.info .info-content .info-head {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    letter-spacing: 0.1em;
+}
+.info .info-content table {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+}
+.info .info-content table td:first-child {
+    padding-right: 15px;
+}
+    
+@media (max-width: 800px) {
+    header .title .head {
+        font-size: 54px;
+    }
+    main {
+        display: block;
+    }
+    main .form {
+        width: auto;
+    }.info .info-content {
+        background: rgba(255, 255, 255, 0.1);
+        /* background-color: red; */
+        border-radius: 10px;
+        display: inline-block;
+        height: auto;
+        min-width: 300px;
+        padding: 10px 30px;
+        
+    }
+    .info {
+        /* background-color: blue; */
+        width: 100%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding-right: 2em;
+        margin: 2em 0 2em 0;
+    }
+}

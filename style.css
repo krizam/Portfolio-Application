@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* thsi is for background */
+.background-image {
+    position: absolute;
+    height: 100vh;
+    opacity: 0.1;
+    z-index: -1;
+    transform: translateX(-30%);
+}
+
+body {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* vh means view height and vw means view width */
+}
+
+.mob-view{
+    display: none;
+    /* this pause mobile based naviogation pannel while in desktop mode */
+}
+
+/* main container begisn */
+.container{
+    color: #fff;
+    display: flex;
+    /* background-color: red; */
+    width: 95vw;
+    height: 80vh;
+}
+.container .body{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+/* styling texts begisn */
+.container .body .light{
+    font-weight: 500;
+    font-size: 58px;
+}
+.container .body .bold{
+    font-weight: 700;
+    font-size: 64px;
+    margin-top: 2vh;
+}
+.container .body .info{
+    font-weight: 600;
+    font-size: 30px;
+    color: #00ABF0;
+    margin-top: 10vh;
+}
+.container .body .collage{
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px;
+}
+/* button styling */
+.container .body .link a{
+    background: #00ABF0;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 3vh;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.container .body .link a:hover{
+    transform: scale(1.1);
+}
+
+
+/* image styling */
+.container .image{
+    width: 100%;
+    overflow: hidden;
+    transition: .2s;
+}
+.container .image img{
+    border-radius: 100px;
+    object-fit: cover;
+    height: 90%;
+    width: 90%;
+}
+.container .image:hover {
+    transform: scale(1.1);
+}
+
+/* this pagelink is nevigation for desktop voiew */
+/* desktip mode navigation styling begins */
+.container .page-link {
+    width: 25%;
+    padding-right: 2em;
+    padding-left: 1em;
+}
+.container .page-link nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    
+}
+.container .page-link nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+}
+.container .page-link nav a .tiptool {
+    /* this tiptool is to show the icon name while hovering */
+    font-size: 18px;
+    visibility: hidden;
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    border-radius: 15px 15px 0px 15px;
+}
+.container .page-link nav a ion-icon {
+    /* ion-icon is a tag use to grab online icon and place it in that tag */
+    font-size: 28px;
+    color: #00ABF0;
+    transition: 0.2s;
+}
+.container .page-link nav a ion-icon:hover {
+    /* this hover pard is use to bigger the icon  */
+    font-size: 42px;
+    color: #00ABF0;
+}
+.container .page-link nav a:hover > .tiptool {
+    background-color: rgba(255, 255, 255, 0.1);
+    visibility: visible;
+    color: #00ABF0;
+    transition: .4s;
+    /* this hover triggers the visibility of the texts */
+}
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    z-index: 5;
+    padding: 10px;
+    z-index: 5;
+}
+
+/* this media is used for responisveness */
+@media (max-width: 868px) {
+    /* it the page is below 868px then desktop nav will be hidden and mobile navigation will be shown */
+    .page-link {
+        display: none;
+    }
+    .container {
+        margin-top: 15vh;
+    }
+    .mob-view {
+        position: absolute;
+        /* background-color: red; */
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 100px;
+    }
+    .mob-view a{
+        text-decoration: none;
+        color: #00ABF0;
+        position: relative;
+    }
+    .mob-view a ion-icon {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+    .mob-view a ion-icon:hover + .tiptool{
+        /* background-color: red; */
+        visibility: visible;
+    }
+    .mob-view a .tiptool{
+        visibility: hidden;
+        background-color: #ffffff10;
+        display: inline-block;
+        padding: 8px;
+        position: absolute;
+        bottom: -25px;
+        border-radius: 10px;
+        position: absolute;
+        left: -35%;
+        width: 90px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .body .bold {
+        font-weight: 700;
+        font-size: 45px;
+    }
+    .container .body .light {
+        font-size: 38px;
+    }
+    .container .body .info {
+        font-size: 20px;
+    }
+    .container .image img {
+        height: 70%;
+        width: 90%;
+    }
+    .background-image {
+        transform: translateX(0%);
+    }
+}
