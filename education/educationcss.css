@@ -23,6 +23,56 @@ body {
     position: absolute;
     z-index: -1;
 }
+.timeline-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+.timeline-lane {
+    width: 4px;
+    background-color: #00ABF0;
+    height: 100%;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+.date {
+    width: 150px;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #00ABF0;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+}
+.content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+.school-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+.school-content {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
 
 
 header {
