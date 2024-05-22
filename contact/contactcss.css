@@ -211,3 +211,8 @@ main .form .send input:hover {
         margin: 2em 0 2em 0;
     }
 }
+main .form .send input:hover {
+    background-color: #6cc8ec;
+    font-weight: 700;
+    transform: scale(1.05);
+}
